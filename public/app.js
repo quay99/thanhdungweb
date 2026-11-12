@@ -2119,8 +2119,9 @@
   }
 
   if (accLightboxZaloLink) {
-    accLightboxZaloLink.addEventListener("click", () => {
+    accLightboxZaloLink.addEventListener("click", (e) => {
       if (!currentLightboxAcc) return;
+      e.preventDefault();
       const acc = currentLightboxAcc;
       const lines = [
         "═══════════════════════════════════════",
